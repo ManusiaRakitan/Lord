@@ -18,7 +18,6 @@ async def typewriter(typew):
 @register(outgoing=True, pattern='^.lord(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    sleep(1)
     await typew.edit("`HALLO LORD AKU ADALAH BOT, DAN AKU AKAN SELALU MEMBANTU MU UNTUK BERSENANG-SENANG DI DUNIA TELEGRAM`")
     sleep(2)
     await typew.edit("`\n█████████`"
@@ -57,6 +56,29 @@ async def typewriter(typew):
                      "`\n█▲▲▲▲▲`"
                      "`\n█████████`"
                      "`\n ██   ██`")
+
+@register(outgoing=True, pattern='^.punten(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`\n┻┳|―-∩`"
+                     "`\n┳┻|     ヽ`"
+                     "`\n┻┳|    ●  |`"
+                     "`\n┳┻|▼) _ノ`"
+                     "`\n┻┳|￣    )`"
+                     "`\n┳ﾐ(￣ ／`"
+                     "`\n┻┳T￣|`"
+                     "\n__Punten__")
+@register(outgoing=True, pattern='^.pantau(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`\n┻┳|―-∩`"
+                     "`\n┳┻|     ヽ`"
+                     "`\n┻┳|    ●  |`"
+                     "`\n┳┻|▼) _ノ`"
+                     "`\n┻┳|￣    )`"
+                     "`\n┳ﾐ(￣ ／`"
+                     "`\n┻┳T￣|`"
+                     "\n__Masih Ku Pantau__")
 
 
 # Create by myself @localheart
