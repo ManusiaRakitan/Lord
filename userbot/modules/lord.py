@@ -48,7 +48,7 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("` \n   ╲╲╭━━━━╮ \n╭╮┃▆┈┈▆┃╭╮ \n┃╰┫★★★┣╯┃ \n╰━┫★★★┣━╯`"
                      "`\n╲╲┃┈┈┈┈┃  \n╲╲┃┈┏┓┈┃ `")
-    sleep(3)
+    sleep(1)
     await typew.edit("`\n█████████`"
                      "`\n█▄█████▄█`"
                      "`\n█▼▼▼▼▼`"
@@ -56,7 +56,7 @@ async def typewriter(typew):
                      "`\n█▲▲▲▲▲`"
                      "`\n█████████`"
                      "`\n ██   ██`")
-    sleep(3)
+    sleep(2)
     await typew.edit("`\n┻┳|―-∩`"
                      "`\n┳┻|     ヽ`"
                      "`\n┻┳|    ● |`"
@@ -65,7 +65,6 @@ async def typewriter(typew):
                      "`\n┳ﾐ(￣ ／`"
                      "`\n┻┳T￣|`"
                      "\n__Aku Nyimak Ajalah__")
-
 
 @register(outgoing=True, pattern='^.punten(?: |$)(.*)')
 async def typewriter(typew):
@@ -101,6 +100,7 @@ CMD_HELP.update({
 \nUsage: Bot\
 \n\n`.sadboy`\
 \nUsage: hiks"
-    \n\n`.punten`
-    `.pantau`\nUsage: coba aja"
+\n\n`.punten` ; `.pantau`\
+\nUsage: coba aja"
 })
+
