@@ -57,6 +57,7 @@ async def typewriter(typew):
                      "`\n█████████`"
                      "`\n ██   ██`")
 
+
 @register(outgoing=True, pattern='^.punten(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -68,6 +69,8 @@ async def typewriter(typew):
                      "`\n┳ﾐ(￣ ／`"
                      "`\n┻┳T￣|`"
                      "\n__Punten__")
+
+
 @register(outgoing=True, pattern='^.pantau(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
