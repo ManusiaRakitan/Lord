@@ -66,6 +66,7 @@ async def typewriter(typew):
                      "`\n┻┳T￣|`"
                      "\n__Aku Nyimak Ajalah__")
 
+
 @register(outgoing=True, pattern='^.punten(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -100,7 +101,6 @@ CMD_HELP.update({
 \nUsage: Bot\
 \n\n`.sadboy`\
 \nUsage: hiks"
-\n\n`.punten` ; `.pantau`\
-\nUsage: coba aja"
+    \n\n`.punten`
+    `.pantau`\nUsage: coba aja"
 })
-
