@@ -100,9 +100,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/Zora24/Lord-Userbot.git")
+    "https://github.com/Camel07/XBot-Remix.git")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Lord-Userbot")
+    "UPSTREAM_REPO_BRANCH", "x-sql-extended")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -163,7 +163,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Lord-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "XBOT-REMIX")
 
 # Bot version
 BOT_VER = os.environ.get("BOT_VER", "4.0")
@@ -176,7 +176,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/62dc59b2013a48f9cc8f3.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/57b5bff10eeeb5110c493.mp4"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -315,7 +315,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```『Lord-Userbot Telah Aktif』```")
+    await bot.send_message(BOTLOG_CHATID, "```🐨BOT KAMPANG🐨\nMENYALA ANJEEENG```")
     return
 
 with bot:
@@ -345,7 +345,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {}".format("⚙️", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {}".format("🔹", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols],
@@ -386,9 +386,9 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("Userbot [LORD](https://github.com/Zora24/Lord-Userbot.git) Buat Userbotmu Sendiri Tekan LORD Lalu Tekan Deoloy")
+                await event.reply("I'm [BOT KAMPANG](https://github.com/Camel07/XBot-Remix) modules helper...\nplease make your own bot, don't use mine 😋")
             else:
-                await event.reply(f"`Hai {ALIVE_NAME}\n\nKau Adalah Lordku:)`")
+                await event.reply(f"`Hey there {ALIVE_NAME}\n\nI work for you :)`")
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -398,9 +398,9 @@ with bot:
             if event.query.user_id == uid and query.startswith("@UserButt"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
-                    "Harap Gunakan .help Untuk Perintah",
-                    text="{}\nTotal Modul: {}\n               \n🖥 **Main Menu** 🖥\n".format(
-                        "ALVIN✗BOT BANTUAN MODUL",
+                    "Please Use Only With .help Command",
+                    text="{}\nTotal loaded Modules: {}\n               \n🐨 **MODULE INFO KAMPANG** 🐨\n".format(
+                        "🐨BOT KAMPANG🐨 modules helper",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -408,22 +408,22 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "ALVIN✗BOT Helper",
-                    text="Daftar Modul",
+                    "🐨BOT KAMPANG🐨 Helper",
+                    text="List of Modules",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    "ALVIN✗BOT",
+                    "BOT KAMPANG",
                     text="""You can convert your account to bot and use them. Remember, you can't manage someone else's bot! All installation details are explained from GitHub address below.""",
                     buttons=[
                         [
                             custom.Button.url(
                                 "GitHub Repo",
-                                "https://github.com/Zora24/Lord-Userbot"),
+                                "https://github.com/Camel07/XBot-Remix"),
                             custom.Button.url(
                                 "Support",
-                                "t.me/liualvinas")],
+                                "https://t.me/mixiologist")],
                     ],
                     link_preview=False,
                 )
@@ -477,7 +477,7 @@ with bot:
                 if len(cmdhel) > 150:
                     help_string = (
                         str(CMD_HELP[modul_name]).replace('`', '')[:150] + "..."
-                        + "\n\nBaca Lagi Ketik .help "
+                        + "\n\nRead more .help "
                         + modul_name
                         + " "
                     )
